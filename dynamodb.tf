@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "retail_products" {
-  name         = "${local.name_prefix}-retail-products"
+  name         = "retail-products"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "id"
 
@@ -17,6 +17,6 @@ resource "aws_dynamodb_table" "retail_products" {
   }
 
   tags = {
-    Name = "${local.name_prefix}-retail-products"
+    Name = "retail-products"
   }
 }
