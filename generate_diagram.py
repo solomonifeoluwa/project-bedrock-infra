@@ -2,7 +2,7 @@ from diagrams import Diagram, Cluster, Edge
 from diagrams.aws.network import (
     InternetGateway,
     ALB,
-    NatGateway,
+    NATGateway,
     PrivateSubnet,
     PublicSubnet,
 )
@@ -36,7 +36,7 @@ with Diagram(
             with Cluster("Public Subnets\nus-east-1a / us-east-1b"):
                 igw = InternetGateway("Internet Gateway")
                 alb = ALB("ALB\n(AWS Load Balancer\nController)")
-                nat = NatGateway("NAT Gateway")
+                nat = NATGateway("NAT Gateway")
 
             with Cluster("Private Subnets\nus-east-1a / us-east-1b"):
 
